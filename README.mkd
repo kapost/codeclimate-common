@@ -11,13 +11,6 @@ can discuss as a team, and easily update all projects to use the same rules.
 To install into a new repo or update the configs in an existing one:
 
 ```sh
-$ git archive --format=tar --remote=https://github.com/kapost/codeclimate-common HEAD | tar xf -
-$ rm 00-install.sh
-```
-
-Or, if you're feeling daring:
-
-```sh
 $ curl -L https://raw.githubusercontent.com/kapost/codeclimate-common/master/install.sh | bash
 ```
 
