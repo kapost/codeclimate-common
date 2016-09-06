@@ -3,6 +3,11 @@
 
 Common Robocop, Reek, CSSLint, ESLint configurations that we should be sharing between all apps.
 
+For all the files listed in this repo, please try to avoid modifying them
+locally in your own projects (I've added a comment indicating such in all files
+that support comments). Instead, modify them here, and open a PR. This way, we
+can discuss as a team, and easily update all projects to use the same rules.
+
 To install into a new repo or update the configs in an existing one:
 
 ```sh
