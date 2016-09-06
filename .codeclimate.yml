@@ -1,0 +1,38 @@
+---
+engines:
+  rubocop:
+    enabled: true
+  bundler-audit:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+        - ruby
+    exclude_paths:
+      - "spec/"
+  reek:
+    enabled: true
+  shellcheck:
+    enabled: true
+  brakeman:
+    enabled: true
+  fixme:
+    enabled: true
+  markdownlint:
+    enabled: true
+  csslint:
+    enabled: true
+
+ratings:
+  paths:
+    - app/**
+    - lib/**
+    - "**/*.rb"
+
+exclude_paths:
+  - "vendor/**/*"
+  - "node_modules/**/*"
+  - "spec/fixtures/**/*"
+
+

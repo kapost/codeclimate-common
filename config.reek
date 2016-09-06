@@ -1,0 +1,20 @@
+
+"app/controllers":
+  NestedIterators:
+    max_allowed_nesting: 2
+  UnusedPrivateMethod:
+    enabled: false
+"app/helpers":
+  UtilityFunction:
+    enabled: false
+"spec/support":
+  UtilityFunction:
+    enabled: false
+
+# This one just makes sure the Class/Module has a comment. Dumb.
+IrresponsibleModule:
+  enabled: false
+
+# Rubocop has this covered already
+TooManyStatements:
+  enabled: false
