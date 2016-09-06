@@ -9,6 +9,7 @@ engines:
     config:
       languages:
         - ruby
+        - javascript
     exclude_paths:
       - "spec/"
   reek:
@@ -23,12 +24,24 @@ engines:
     enabled: true
   csslint:
     enabled: true
+  scss-lint:
+    enabled: true
+  coffeelint:
+    enabled: true
+  eslint:
+    enabled: true
+  # Uncomment this one if your app has an npm-shrinkwrap
+  # nodesecurity:
+  #   enabled: true
 
 ratings:
   paths:
     - app/**
     - lib/**
     - "**/*.rb"
+    - "**/*.js"
+    - "**/*.coffee"
+    - Gemfile.lock # For bundler-audit
 
 exclude_paths:
   - "vendor/**/*"
