@@ -1,0 +1,23 @@
+
+# Kapost Common Code Climate Configuration (KC4)
+
+Common Robocop, Reek, CSSLint, ESLint configurations that we should be sharing between all apps.
+
+To install into a new repo or update the configs in an existing one:
+
+```sh
+$ git archive --format=tar --remote=https://github.com/kapost/codeclimate-common HEAD | tar xf -
+$ rm 00-install.sh
+```
+
+Or, if you're feeling daring:
+
+```sh
+$ curl -L https://raw.githubusercontent.com/kapost/codeclimate-common/master/00-install.sh | bash
+```
+
+Both of these commands will clobber your local files, so examine the diffs, and
+be sure to re-incorporate any local changes for you project. For Rubocop, at
+least, the commonalities have been extracted to a `.rubocop.kapost.yml` file
+that gets imported.
+
