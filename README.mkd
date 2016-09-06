@@ -13,7 +13,7 @@ $ rm 00-install.sh
 Or, if you're feeling daring:
 
 ```sh
-$ curl -L https://raw.githubusercontent.com/kapost/codeclimate-common/master/00-install.sh | bash
+$ curl -L https://raw.githubusercontent.com/kapost/codeclimate-common/master/install.sh | bash
 ```
 
 Both of these commands will clobber your local files, so examine the diffs, and
