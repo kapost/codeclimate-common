@@ -20,6 +20,3 @@
 IrresponsibleModule:
   enabled: false
 
-# Rubocop has this covered already
-TooManyStatements:
-  enabled: false
