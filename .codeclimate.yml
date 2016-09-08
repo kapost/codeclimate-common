@@ -49,8 +49,8 @@ ratings:
     - Gemfile.lock # For bundler-audit
 
 exclude_paths:
-  - "vendor/**/*"
-  - "node_modules/**/*"
+  - "**/vendor/**/*"
+  - "**/node_modules/**/*"
   - "spec/fixtures/**/*"
 
 
