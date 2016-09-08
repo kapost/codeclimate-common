@@ -53,3 +53,8 @@ FeatureEnvy:
 # This one just makes sure the Class/Module has a comment. Dumb.
 IrresponsibleModule:
   enabled: false
+
+# Oftentimes it makes sense to namespace groups of versioned components "V2", "V1"
+UncommunicativeModuleName:
+  accept:
+    - !ruby/regexp /V[0-9]$/
