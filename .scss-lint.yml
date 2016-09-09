@@ -3,3 +3,5 @@ linters:
     max_depth: 4
   NestingDepth:
     max_depth: 4
+  PropertySortOrder:
+    order: recess
