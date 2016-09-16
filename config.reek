@@ -20,6 +20,18 @@ LongParameterList:
   exclude:
   - initialize
 
+# Dislikes method names ending in a number (Like `test2`, etc...) But, these
+# are the names of actual AWS services, and it is common to have the variables
+# named the same.
+UncommunicativeMethodName:
+  accept:
+    - s3
+    - ec2
+UncommunicativeVariableName:
+  accept:
+    - s3
+    - ec2
+
 "app/controllers":
   NestedIterators:
     max_allowed_nesting: 2
