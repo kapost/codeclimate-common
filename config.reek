@@ -32,6 +32,12 @@ UncommunicativeVariableName:
     - s3
     - ec2
 
+# AS::Subscriber objects tend to rely heavily on `event` and `payload`, so its
+# hard to avoid "Feature Envy", but is prefectly readable.
+FeatureEnvy:
+  exclude:
+    - !ruby/regexp /Subscriber/
+
 "app/controllers":
   NestedIterators:
     max_allowed_nesting: 2
