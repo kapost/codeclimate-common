@@ -5,3 +5,5 @@ linters:
     max_depth: 4
   PropertySortOrder:
     order: recess
+  LeadingZero:
+    style: include_zero
