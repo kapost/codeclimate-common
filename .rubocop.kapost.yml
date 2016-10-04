@@ -28,6 +28,8 @@ AllCops:
   TargetRubyVersion: 2.3
 Style/AndOr:
   EnforcedStyle: conditionals
+Style/BracesAroundHashParameters:
+  EnforcedStyle: context_dependent
 Style/CaseIndentation:
   IndentOneStep: true
 Style/Documentation:
