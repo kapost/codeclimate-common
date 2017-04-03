@@ -46,6 +46,11 @@ FeatureEnvy:
 "app/helpers":
   UtilityFunction:
     enabled: false
+"db/migrate":
+  TooManyStatements:
+    enabled: false
+  FeatureEnvy:
+    enabled: false
 "spec/support":
   UtilityFunction:
     enabled: false
