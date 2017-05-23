@@ -4,7 +4,7 @@
 # codeclimate-common repo at https://github.com/kapost/codeclimate-common
 
 ---
-# Pepperweed eslintrc
+# Weeds eslintrc
 #
 # Note that this file was lovingly put together and all rules are intentionlly here,
 # not just copied from a sample file. So please discuss with the project lead before modifying.
@@ -26,12 +26,18 @@ globals:
   __CLIENT__: true
   __SERVER__: true
   __DEVELOPMENT__: true
+  __PRODUCTION__: true
+  __DEPLOY_ENV__: true
+  __PROJECT_ROOT__: true
+  __SERVER_LOG_LEVEL__: true
   __RELATIVE_ROOT__: true
   __DEVTOOLS__: true
   Promise: true
-  ga: true
-  expect: true
-  chai: true
+  expect: true       # specHelper
+  chai: true         # specHelper
+  browser: true      # webdriverio
+  $: true            # webdriverio
+  $$: true           # webdriverio
 
 
 parserOptions:
@@ -40,31 +46,6 @@ parserOptions:
   ecmaFeatures:
     jsx: true
     modules: true
-
-# For legacy eslint, will remove after ensuring eslint 2 works everywhere.
-# ecmaFeatures:
-#   arrowFunctions: true
-#   binaryLiterals: false
-#   blockBindings: true
-#   classes: true
-#   defaultParams: true
-#   destructuring: true
-#   forOf: true
-#   generators: false
-#   modules: true
-#   objectLiteralComputedProperties: true
-#   objectLiteralDuplicateProperties: false
-#   objectLiteralShorthandMethods: true
-#   objectLiteralShorthandProperties: true
-#   octalLiterals: false
-#   regexUFlag: false
-#   regexYFlag: false
-#   restParams: true
-#   spread: true
-#   superInFunctions: true
-#   templateStrings: true
-#   unicodeCodePointEscapes: false
-#   globalReturn: false
 
 
 rules:
@@ -91,8 +72,8 @@ rules:
   react/jsx-uses-vars: 2
   react/no-danger: 0
   react/no-did-mount-set-state: 1
-  react/no-did-update-set-state: 0
-  react/no-multi-comp: 2
+  react/no-did-update-set-state: 1
+  react/no-multi-comp: 0
   react/no-unknown-property: 2
   react/prop-types: [1, { ignore: [children, className] }]
   react/react-in-jsx-scope: 2
@@ -141,7 +122,7 @@ rules:
 
   ### Best practices
   block-scoped-var: 2                           # http://eslint.org/docs/rules/block-scoped-var
-  complexity: 0                                 # http://eslint.org/docs/rules/complexity.html
+  complexity: [2, 6]                            # http://eslint.org/docs/rules/complexity.html
   consistent-return: 2                          # http://eslint.org/docs/rules/consistent-return
   curly: [2, multi-line]                        # http://eslint.org/docs/rules/curly#
   default-case: 2                               # http://eslint.org/docs/rules/default-case
@@ -214,7 +195,8 @@ rules:
   func-style: 0                                             # http://eslint.org/docs/rules/func-style
   key-spacing: [2, { beforeColon: false, afterColon: true }]  # http://eslint.org/docs/rules/key-spacing
   max-nested-callbacks: [2, 3]                              # http://eslint.org/docs/rules/max-nested-callbacks
-  max-len: [2, 100]
+  max-len: [2, 100]                                         # http://eslint.org/docs/rules/max-len
+  max-statements: [2, 10]                                   # http://eslint.org/docs/rules/max-statements
   new-cap: 1                                                # http://eslint.org/docs/rules/new-cap
   new-parens: 2                                             # http://eslint.org/docs/rules/new-parens
   no-array-constructor: 1                                   # http://eslint.org/docs/rules/no-array-constructor
