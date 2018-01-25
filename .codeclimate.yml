@@ -67,18 +67,30 @@ plugins:
     config:
       patterns:
         no-dot-only:
-          pattern: \.only
+          pattern: (describe|context|it)\.only
           annotation: "Make sure not to commit `.only` in specs, as it disables the rest of the suite."
           severity: blocker
           path_patterns:
-          - "**/*_spec.rb"
           - "**/*Spec.js"
-          - "**/specs/"
-          - "**/spec/"
-          - "spec/"
-          - "**/tests/"
-          - "**/test/"
-          - "test/"
+          - "**/specs/*.js"
+          - "**/spec/*.js"
+          - "spec/*.js"
+          - "**/tests/*.js"
+          - "**/test/*.js"
+          - "test/*.js"
+        no-focused-specs:
+          pattern: "(focus: true|:focus => true|fit \")"
+          annotation: "Make sure not to commit focused ruby specs (`focus: true` or `fit`), as it disables the rest of the suite."
+          severity: blocker
+          path_patterns:
+          - "**/*_spec.rb"
+          - "**/specs/*.rb"
+          - "**/spec/*.rb"
+          - "spec/*.rb"
+          - "**/tests/*.rb"
+          - "**/test/*.rb"
+          - "test/*.rb"
+
 
 exclude_patterns:
   - "**/vendor/"
