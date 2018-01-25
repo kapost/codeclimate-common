@@ -4,53 +4,114 @@
 # codeclimate-common repo at https://github.com/kapost/codeclimate-common
 
 ---
-engines:
+version: 2
+plugins:
   rubocop:
     enabled: true
   bundler-audit:
     enabled: true
   duplication:
     enabled: true
+    exclude_patterns:
+    - "**/*Spec.js"
+    - "**/*_spec.rb"
+    - "**/specs/"
+    - "**/spec/"
+    - "spec/"
+    - "**/tests/"
+    - "**/test/"
+    - "test/"
+    - "features/"
+    - "lib/tasks/"
+    - "tasks/"
     config:
       languages:
-        - ruby
-        - javascript
-    exclude_paths:
-      - "spec/"
+        javascript:
+          mass_threshold: 140
+        ruby:
+          mass_threshold: 25 # default in source code as of 01/18/2018 (docs out of date)
   reek:
     enabled: true
   shellcheck:
     enabled: true
-  brakeman:
-    enabled: true
   fixme:
     enabled: true
-  markdownlint:
-    enabled: true
+    config:
+      strings:
+      - FIXME
   csslint:
-    enabled: true
+    enabled: false
   scss-lint:
     enabled: true
   coffeelint:
-    enabled: true
+    enabled: false
   eslint:
     enabled: true
-  # Uncomment this one if your app has an npm-shrinkwrap
-  # nodesecurity:
-  #   enabled: true
+    channel: "eslint-4"
+    config:
+      extensions:
+      - .es6
+      - .js
+      - .jsx
+    checks:
+      keyword-spacing:
+        enabled: false
+      react/jsx-space-before-closing:
+        enabled: false
+      no-warning-comments: # these are nice for client
+        enabled: false
+  nodesecurity:
+    enabled: false # turn back on if they start supporting yarn.lock
+  grep:
+    enabled: true
+    config:
+      patterns:
+        no-dot-only:
+          pattern: \.only
+          annotation: "Make sure not to commit `.only` in specs, as it disables the rest of the suite."
+          severity: blocker
+          path_patterns:
+          - "**/*_spec.rb"
+          - "**/*Spec.js"
+          - "**/specs/"
+          - "**/spec/"
+          - "spec/"
+          - "**/tests/"
+          - "**/test/"
+          - "test/"
 
-ratings:
-  paths:
-    - app/**
-    - lib/**
-    - "**/*.rb"
-    - "**/*.js"
-    - "**/*.coffee"
-    - Gemfile.lock # For bundler-audit
-
-exclude_paths:
-  - "**/vendor/**/*"
-  - "**/node_modules/**/*"
-  - "spec/fixtures/**/*"
-
-
+exclude_patterns:
+  - "**/vendor/"
+  - "**/node_modules/"
+  - "build/"
+  - "index.js"
+  - "Gulpfile.js"
+  - "bin/"
+  - "config/"
+  - "coverage/"
+  - "dist/"
+  - "transpiled/"
+  - "test/**/*"
+  - "**/*.md"
+  - "**/*.json"
+  - "**/*.svg"
+  - "**/fixtures/*"
+  - "**/fixture/*"
+  - "**/*Fixture.js"
+  - "**_meyerReset.scss"
+  - "docker/"
+  - "scripts/"
+  - "app/assets/static/static/*" # change to just assets when we move scss into pods
+  - "app/assets/static/svg/*" # change to just assets when we move scss into pods
+  - ".codeclimate.yml"
+  - "db/migrate/*"
+  - "engines/**/db/migrate/*"
+  - "spec/fixtures/*"
+  - "features/"
+  - "Guardfile"
+  - "Rakefile"
+  - "config.reek"
+  - "**/webpack.config.js"
+  - "**/webpack.config.spec.js"
+  - "**/.eslintrc.js"
+  - "app/assets/javascripts/**/*"

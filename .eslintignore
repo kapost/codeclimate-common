@@ -4,3 +4,7 @@ config/**
 test/**
 build/**
 coverage/**
+dist/**
+transpiled/**
+**/*Fixture.js
+**/fixtures
