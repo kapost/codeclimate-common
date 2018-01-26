@@ -1,9 +1,20 @@
 linters:
-  SelectorDepth:
-    max_depth: 4
-  NestingDepth:
-    max_depth: 4
+  StringQuotes:
+    enabled: true
+    style: double_quotes
   PropertySortOrder:
     order: recess
   LeadingZero:
     style: include_zero
+  NestingDepth:
+    ignore_parent_selectors: true
+    max_depth: 4
+  HexNotation:
+    style: uppercase
+  HexLength:
+    style: long
+
+exclude:
+  - "**/vendor/**"
+  - "**/node_modules/**"
+  - "node_modules/**"
