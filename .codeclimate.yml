@@ -64,6 +64,8 @@ plugins:
     enabled: false # turn back on if they start supporting yarn.lock
   grep:
     enabled: true
+    exclude_patterns:
+    - "**/spec_helper.rb"
     config:
       patterns:
         no-dot-only:
