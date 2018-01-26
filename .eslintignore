@@ -8,3 +8,4 @@ dist/**
 transpiled/**
 **/*Fixture.js
 **/fixtures
+es5.js
