@@ -33,7 +33,7 @@ Style/BracesAroundHashParameters:
 Style/CaseIndentation:
   IndentOneStep: true
 Style/Documentation:
-  Enabled: false
+  Enabled: true
 Style/EachWithObject:
   Enabled: false
 Style/ExtraSpacing:
