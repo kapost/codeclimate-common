@@ -53,6 +53,8 @@ module.exports = {
     ],
     // We are stricter with complexity
     "complexity": ["error", 6],
+    // There are enough cases where this is more annoying than helpful (React components)
+    "consistent-return": "off",
     // We allow the developer to decide what is best for readability, only looking for consistency
     "function-paren-newline": ["error", "consistent"],
     // Adjust extension warnings, allowing json to be imported.
