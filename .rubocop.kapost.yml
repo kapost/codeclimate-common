@@ -26,6 +26,9 @@ Rails/TimeZone:
   Enabled: false
 AllCops:
   TargetRubyVersion: 2.3
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
 Style/AndOr:
   EnforcedStyle: conditionals
 Style/BracesAroundHashParameters:
