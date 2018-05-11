@@ -39,6 +39,8 @@ module.exports = {
   rules: {
     // We let the developer decide on whether to add arrow function braces or not, as it is a readability judgement.
     "arrow-body-style": "off",
+    // We also let the developer decide when to add parens. This is nicer for flow with single-arity function chains.
+    "arrow-parens": "off",
     // More reasonable comma-dangle config (only when we get a benefit in git diff). Functions are a bit ugly so we ignore comma dangle
     // (allowing the developer to determine readability).
     "comma-dangle": [
