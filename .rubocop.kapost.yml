@@ -98,6 +98,8 @@ Style/ExtraSpacing:
     - "bin/**/*"
   Exclude:
     - "config/routes.rb"
+Style/WordArray:
+  EnforcedStyle: brackets
 Lint/PercentStringArray:
   Exclude:
     # SecureHeaders needs the single quotes in `%w[https: 'self']`
