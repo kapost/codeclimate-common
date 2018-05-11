@@ -103,6 +103,19 @@ module.exports = {
     "no-unused-vars": ["error", { vars: "all", args: "all", argsIgnorePattern: "^_" }],
     // We allow the developer to decide what is best for readability, only looking for consistency
     "object-curly-newline": ["error", { "consistent": true }],
+    // We don't require array destructuring like airbnb
+    "prefer-destructuring": ["error", {
+      VariableDeclarator: {
+        array: false,
+        object: true,
+      },
+      AssignmentExpression: {
+        array: false,
+        object: true,
+      },
+    }, {
+      enforceForRenamedProperties: false,
+    }],
     // We stick with double quotes to be consistent with ruby and keep to our muscle memory
     "quotes": ["error", "double", { "avoidEscape": true }],
     // We do not care if react is within .js or .jsx extensions, unlike airbnb.
