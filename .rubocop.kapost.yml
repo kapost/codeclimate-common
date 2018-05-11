@@ -45,6 +45,8 @@ Style/ExtraSpacing:
 Style/HashSyntax:
   Exclude:
     - "lib/tasks/**/*"
+Style/SymbolArray:
+  EnforcedStyle: brackets
 Style/MultilineOperationIndentation:
   EnforcedStyle: indented
 Style/NumericLiterals:
