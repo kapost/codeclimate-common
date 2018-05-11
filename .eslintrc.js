@@ -146,7 +146,11 @@ module.exports = {
       }
     ],
     // We prefer no spaces as we already warn with function declaration without names.
-    "space-before-function-paren": ["error", "never"],
+    "space-before-function-paren": ["error", {
+      "anonymous": "never",
+      "named": "never",
+      "asyncArrow": "always",
+    }],
   },
 
   overrides: [
