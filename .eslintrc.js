@@ -111,6 +111,8 @@ module.exports = {
     // NB: I took a stab at fixing this in the plugin, and am pretty sure it is not possible to
     // follow the propType variables without building a full JS interpreter inside the linter.
     "react/no-typos": ["off"],
+    // Consistent component style is valuable.
+    "react/prefer-stateless-function": ["off"],
     // We ignore children as it's up to the developer to validate when not an element.
     "react/prop-types": ["error", { ignore: ["children"] }],
     // OPINIONATED: we define the sort order we have kept to in the weeds, Shared UI, and other packages.
