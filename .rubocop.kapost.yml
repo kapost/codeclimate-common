@@ -33,21 +33,18 @@ Style/AndOr:
   EnforcedStyle: conditionals
 Style/BracesAroundHashParameters:
   EnforcedStyle: context_dependent
-Style/CaseIndentation:
+Layout/CaseIndentation:
   IndentOneStep: true
 Style/Documentation:
   Enabled: true
 Style/EachWithObject:
   Enabled: false
-Style/ExtraSpacing:
-  Exclude:
-    - "config/routes.rb"
 Style/HashSyntax:
   Exclude:
     - "lib/tasks/**/*"
 Style/SymbolArray:
   EnforcedStyle: brackets
-Style/MultilineOperationIndentation:
+Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
 Style/NumericLiterals:
   Enabled: false
@@ -64,7 +61,7 @@ Style/SingleLineBlockParams:
   Enabled: false
 Style/StringLiterals:
   EnforcedStyle: double_quotes
-Style/MultilineMethodCallIndentation:
+Layout/MultilineMethodCallIndentation:
   Exclude:
     - "spec/**/*.rb"
 
@@ -86,17 +83,18 @@ Style/StringLiterals:
 Style/FrozenStringLiteralComment:
   Exclude:
     - "bin/**/*"
-Style/LeadingCommentSpace:
+Layout/LeadingCommentSpace:
   Exclude:
     - "bin/**/*"
-Style/SpaceInsideParens:
+Layout/SpaceInsideParens:
   Exclude:
     - "bin/**/*"
-Style/AlignParameters:
+Layout/AlignParameters:
   Exclude:
     - "bin/**/*"
-Style/ExtraSpacing:
+Layout/ExtraSpacing:
   Exclude:
+    - "config/routes.rb"
     - "bin/**/*"
   Exclude:
     - "config/routes.rb"
