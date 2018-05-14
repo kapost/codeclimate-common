@@ -106,6 +106,7 @@ Lint/PercentStringArray:
   Exclude:
     # SecureHeaders needs the single quotes in `%w[https: 'self']`
     - config/initializers/secure_headers.rb
+# We prefer using raise everywhere.
 Style/SignalException:
-  Description: 'Checks for proper usage of fail and raise.' # the proper usage is 'raise'
+  Description: "Checks for proper usage of fail and raise."
   Enabled: false
