@@ -108,3 +108,5 @@ Lint/PercentStringArray:
 Style/SignalException:
   Description: "Checks for proper usage of fail and raise."
   Enabled: false
+Style/SafeNavigation:
+  AutoCorrect: false # safe navigation autocorrect can easily create bad logic
