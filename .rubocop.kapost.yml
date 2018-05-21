@@ -110,3 +110,6 @@ Style/SignalException:
   Enabled: false
 Style/SafeNavigation:
   AutoCorrect: false # safe navigation autocorrect can easily create bad logic
+Style/RegexpLiteral:
+  AllowInnerSlashes: true
+  EnforcedStyle: slashes
