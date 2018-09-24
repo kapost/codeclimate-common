@@ -85,20 +85,8 @@ module.exports = {
     "max-nested-callbacks": ["error", 3],
     // Disallow undefined used as a keyword
     "no-undefined": "error",
-    // Keep the same dangle rules but ignore globals provided by webpack/node
-    "no-underscore-dangle": ["error", {
-      allow: [
-        "__CLIENT__",
-        "__SERVER__",
-        "__DEVELOPMENT__",
-        "__PRODUCTION__",
-        "__DEPLOY_ENV__",
-        "__PROJECT_ROOT__",
-        "__SERVER_LOG_LEVEL__",
-        "__RELATIVE_ROOT__",
-        "__DEVTOOLS__",
-      ],
-    }],
+    // Underscores should not be used for privacy, but not worth the strict enforcement.
+    "no-underscore-dangle": ["off"],
     // We extend the config to allow underscore ignore style
     "no-unused-vars": ["error", { vars: "all", args: "all", argsIgnorePattern: "^_" }],
     // We allow the developer to decide what is best for readability, only looking for consistency
