@@ -118,6 +118,8 @@ module.exports = {
     }],
     // We stick with double quotes to be consistent with ruby and keep to our muscle memory
     "quotes": ["error", "double", { "avoidEscape": true }],
+    // This rule has good intentions and is a generally good idea, but too overbearing.
+    "react/forbid-prop-types": ["off"],
     // We do not care if react is within .js or .jsx extensions, unlike airbnb.
     "react/jsx-filename-extension": ["error", { extensions: [".js", ".jsx"] }],
     // While this rule would be nice--it doesn't work correctly right now.
