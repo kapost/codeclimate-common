@@ -42,6 +42,9 @@ Layout/CaseIndentation:
   IndentOneStep: true
 Style/Documentation:
   Enabled: true
+  Exclude:
+    - "spec/**/*"
+    - "test/**/*"
 Style/EachWithObject:
   Enabled: false
 Style/HashSyntax:
