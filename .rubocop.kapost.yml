@@ -20,6 +20,11 @@ AllCops:
 
 Metrics/LineLength:
   Max: 120
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - spec/**/*
+    - test/**/*
 Rails/Date:
   Enabled: false
 Rails/TimeZone:
