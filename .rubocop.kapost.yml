@@ -64,6 +64,8 @@ Style/PercentLiteralDelimiters:
     "%i": "[]"
     "%I": "[]"
     "%r": "()"
+Style/RegexpLiteral:
+  Enabled: false
 Style/SignalException:
   EnforcedStyle: semantic
 Style/SingleLineBlockParams:
