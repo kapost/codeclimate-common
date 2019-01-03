@@ -38,7 +38,7 @@ Lint/AmbiguousBlockAssociation:
 Style/AndOr:
   EnforcedStyle: conditionals
 Style/BracesAroundHashParameters:
-  EnforcedStyle: braces
+  Enabled: false
 Layout/CaseIndentation:
   IndentOneStep: true
 Style/Documentation:
