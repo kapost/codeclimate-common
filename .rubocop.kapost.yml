@@ -55,6 +55,8 @@ Style/SymbolArray:
   EnforcedStyle: brackets
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
+Layout/IndentArray:
+  EnforcedStyle: consistent
 Style/NumericLiterals:
   Enabled: false
 Style/PercentLiteralDelimiters:
