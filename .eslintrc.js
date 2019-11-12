@@ -70,11 +70,13 @@ module.exports = {
     "import/first": ["error", { "absolute-first": false }],
     // We should be using es2015 imports in all modern .js and .jsx files
     "import/no-commonjs": "error",
+    "import/no-default-export": "warn",    
     // We expect imports to be sorted by the convention we have been keeping to in the weeds.
     "import/order": ["warn", {
       "groups": ["builtin", "external", "internal", "parent", "sibling"],
       "newlines-between": "always-and-inside-groups",
     }],
+    "import/prefer-default-export": "off",
     // We turn on max lines
     "max-lines": ["error", {
       max: 300,
