@@ -47,7 +47,7 @@ plugins:
     enabled: false
   eslint:
     enabled: true
-    channel: "eslint-4"
+    channel: "eslint-6"
     config:
       extensions:
       - .es6
