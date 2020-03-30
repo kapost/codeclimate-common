@@ -3,46 +3,29 @@
 # similar as possible to ease maintainability. Instead, open a PR in the
 # codeclimate-common repo at https://github.com/kapost/codeclimate-common
 
-Rails:
-  Enabled: true
-
 AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
-  Include:
-    - "**/Rakefile"
-    - "**/config.ru"
   Exclude:
     - "vendor/**/*"
     - "spec/fixtures/**/*"
     - "bin/**/*"
     - "script/**/*"
-
-Metrics/LineLength:
-  Max: 120
 Metrics/BlockLength:
   Enabled: true
   Exclude:
     - "**/spec/**/*"
     - "**/test/**/*"
-Rails/Date:
-  Enabled: false
-Rails/TimeZone:
-  Enabled: false
-AllCops:
-  TargetRubyVersion: 2.3
 Lint/AmbiguousBlockAssociation:
   Exclude:
     - "**/spec/**/*"
     - "**/test/**/*"
 Style/AndOr:
   EnforcedStyle: conditionals
-Style/BracesAroundHashParameters:
-  Enabled: false
 Layout/CaseIndentation:
   IndentOneStep: true
 Style/Documentation:
-  Enabled: true
+  Enabled: false
   Exclude:
     - "**/spec/**/*"
     - "**/test/**/*"
@@ -53,10 +36,18 @@ Style/HashSyntax:
     - "lib/tasks/**/*"
 Style/SymbolArray:
   EnforcedStyle: brackets
+Layout/LineLength:
+  Max: 120
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
-Layout/IndentArray:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
 Style/NumericLiterals:
   Enabled: false
 Style/PercentLiteralDelimiters:
@@ -68,12 +59,8 @@ Style/PercentLiteralDelimiters:
     "%r": "()"
 Style/RegexpLiteral:
   Enabled: false
-Style/SignalException:
-  EnforcedStyle: semantic
 Style/SingleLineBlockParams:
   Enabled: false
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
 Layout/MultilineMethodCallIndentation:
   Enabled: false
 # These are better handled by reek
@@ -100,15 +87,13 @@ Layout/LeadingCommentSpace:
 Layout/SpaceInsideParens:
   Exclude:
     - "bin/**/*"
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   Exclude:
     - "bin/**/*"
 Layout/ExtraSpacing:
   Exclude:
     - "config/routes.rb"
     - "bin/**/*"
-  Exclude:
-    - "config/routes.rb"
 Style/WordArray:
   EnforcedStyle: brackets
 Lint/PercentStringArray:
